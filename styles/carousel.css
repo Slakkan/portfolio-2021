@@ -1,0 +1,60 @@
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.carousel__slide {
+  position: relative;
+  left: 0;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 0 3rem;
+  transition: transform 0.8s;
+}
+
+.carousel__arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  fill: none;
+  left: 2rem;
+  right: inherit;
+  background: var(--secondary);
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+.carousel__arrow:disabled {
+  display: none;
+}
+
+.carousel__arrow > svg{
+  outline: none;
+}
+
+.carousel__arrow:hover,
+.carousel__arrow:focus-within {
+  border: 1px solid var(--primary);
+}
+
+.carousel__arrow:active {
+  background: var(--white);
+  opacity: 50%;
+}
+
+.carousel__arrow:hover,
+.carousel__arrow:focus-within .carousel__arrow-icon {
+  fill: var(--primary);
+}
+
+.carousel__arrow--right {
+  left: inherit;
+  right: 2rem;
+}
+
+.carousel__arrow-icon {
+  fill: var(--white);
+}

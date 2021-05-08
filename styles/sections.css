@@ -4,6 +4,7 @@ section {
   justify-content: center;
   height: 100vh;
   background: var(--black);
+  overflow: hidden;
 }
 
 section > h1 {

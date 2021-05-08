@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./fonts/robotto.css">
+
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/navigation.css">
   <link rel="stylesheet" href="styles/sections.css">
-  <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/carousel.css">
+  <link rel="stylesheet" href="/styles/gallery.css">
+  <link rel="shortcut icon" href="/icons/favicon.webp" type="image/x-icon">
   <title>Portfolio</title>
 </head>
 
 <body>
   <!-- NAVIGATION -->
-  <nav tabindex="-1" class="container">
-    <img class="picture" src="./icons/favicon.ico" alt="icon">
+  <nav tabindex="-1">
+    <img class="picture" src="./icons/favicon.webp" alt="picture">
     <ul>
       <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#about-me">About Me</a></li>
+      <li><a href="#career">Career</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -26,11 +28,34 @@
   <!-- SECTIONS -->
   <section class="container">
     <div class="section-anchor" id="gallery"></div>
-    <img src="./img/monumento.webp" alt="monumento">
+    <div class="carousel">
+      <div id="gallery-one" class="carousel__slide">
+        <div class="gallery-one__container gallery-one__container--right">
+          <p class="gallery-one__text">My name is Lisandro Pastinante <br> <br> I'm a software developer</p>
+          <img class="icon--big" src="./img/me.svg" alt="me">
+        </div>
+        <div class="gallery-one__container">
+          <img class="icon--big" src="./img/web.svg" alt="web">
+          <p class="gallery-one__text">My main expertise is web development...</p>
+        </div>
+        <div class="gallery-one__container gallery-one__container--right">
+          <p class="gallery-one__text">...but I also develop games as a hobby.</p>
+          <img class="icon--big" src="./img/gamer.svg" alt="gamer">
+        </div>
+      </div>
+      <div id="gallery-two" class="carousel__slide">
+        <p class="carousel__description">
+          I'm from Rosario Argentina,
+          a beautiful city by the river Paraná.
+        </p>
+        <img id="gallery-two__first-image" loading="lazy" src="./img/rosario.webp" alt="rosario">
+        <img loading="lazy" src="./img/monumento.webp" alt="monumento">
+      </div>
+    </div>
   </section>
   <section class="container">
-    <div class="section-anchor" id="about-me"></div>
-    <h1>About me</h1>
+    <div class="section-anchor" id="career"></div>
+    <h1>Career</h1>
   </section>
   <section class="container">
     <div class="section-anchor" id="skills"></div>
@@ -42,6 +67,8 @@
   </section>
   <!-- SCRIPTS -->
   <script src="./scripts/navigation.js"></script>
+  <!-- COMPONENTS -->
+  <script src="./components/carousel.js" type="module"></script>
 </body>
 
 </html>
