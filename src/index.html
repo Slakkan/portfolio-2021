@@ -4,20 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/navigation.css">
-  <link rel="stylesheet" href="styles/sections.css">
-  <link rel="stylesheet" href="styles/carousel.css">
-  <link rel="stylesheet" href="/styles/gallery.css">
-  <link rel="shortcut icon" href="/icons/favicon.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/favicon.webp" type="image/x-icon">
   <title>Portfolio</title>
 </head>
 
 <body>
   <!-- NAVIGATION -->
   <nav tabindex="-1">
-    <img class="picture" src="./icons/favicon.webp" alt="picture">
+    <img class="picture" src="./img/favicon.webp" alt="picture">
     <ul>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#career">Career</a></li>
@@ -26,6 +20,8 @@
     </ul>
   </nav>
   <!-- SECTIONS -->
+
+  <!-- GALLERY -->
   <section class="container">
     <div class="section-anchor" id="gallery"></div>
     <div class="carousel">
@@ -51,24 +47,39 @@
         <img id="gallery-two__first-image" loading="lazy" src="./img/rosario.webp" alt="rosario">
         <img loading="lazy" src="./img/monumento.webp" alt="monumento">
       </div>
+      <div id="gallery-three" class="carousel__slide">
+        <h3>Languages I speak fluently</h3>
+        <ul class="language-list">
+          <li><img class="icon" src="/img/flag-ar.svg" alt="flag-ar"></li>
+          <li><img class="icon" src="/img/flag-it.svg" alt="flag-it"></li>
+          <li><img class="icon" src="/img/flag-usa.svg" alt="flag-usa"></li>
+        </ul>
+        <h3>Languages I'm learning</h3>
+        <ul class="language-list">
+          <li><img class="icon" src="/img/flag-de.svg" alt="flag-ar"></li>
+          <li><img class="icon" src="/img/flag-jp.svg" alt="flag-it"></li>
+        </ul>
+      </div>
     </div>
   </section>
+
+  <!-- CAREER -->
   <section class="container">
     <div class="section-anchor" id="career"></div>
     <h1>Career</h1>
   </section>
+
+  <!-- SKILLS -->
   <section class="container">
     <div class="section-anchor" id="skills"></div>
     <h1>Skills</h1>
   </section>
+
+  <!-- CONTACT -->
   <section class="container">
     <div class="section-anchor" id="contact"></div>
     <h1>Contact</h1>
   </section>
-  <!-- SCRIPTS -->
-  <script src="./scripts/navigation.js"></script>
-  <!-- COMPONENTS -->
-  <script src="./components/carousel.js" type="module"></script>
 </body>
 
 </html>

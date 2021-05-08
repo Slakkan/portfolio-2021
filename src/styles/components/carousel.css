@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   overflow: hidden;
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
 .carousel__slide {

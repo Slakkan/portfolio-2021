@@ -1,4 +1,4 @@
-import { html, render } from '../node_modules/lit-html/lit-html.js';
+import { html, render } from 'lit-html';
 
 const carousels = Array.from(document.querySelectorAll(".carousel"));
 const slides = [];
@@ -37,14 +37,14 @@ class Carousel {
     return html`
     <button ?disabled=${this.currentSlide === 0} @click=${ this.previous.bind(this) } @keyup=${ this.previous.bind(this) }"
       class="carousel__arrow icon">
-      <svg tabindex="1" viewBox="0 0 24 24">
-        <use class="carousel__arrow-icon" href="./icons/arrow-left.svg#icon"></use>
+      <svg tabindex="-1" viewBox="0 0 24 24">
+        <use class="carousel__arrow-icon" href="./img/arrow-left.svg#icon"></use>
       </svg>
     </button>
     ${ slides.map(slide => html`${ slide }`) }
     <button ?disabled=${this.currentSlide === this.slides.length - 1} @click=${ this.next.bind(this) } @keyup=${ this.next.bind(this) } class="carousel__arrow carousel__arrow--right icon">
-      <svg tabindex="2" viewBox="0 0 24 24">
-        <use class="carousel__arrow-icon" href="./icons/arrow-right.svg#icon"></use>
+      <svg tabindex="-1" viewBox="0 0 24 24">
+        <use class="carousel__arrow-icon" href="./img/arrow-right.svg#icon"></use>
       </svg>
     `;
   }
