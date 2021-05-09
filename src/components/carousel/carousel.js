@@ -41,7 +41,7 @@ class Carousel {
         <use class="carousel__arrow-icon" href="./img/arrow-left.svg#icon"></use>
       </svg>
     </button>
-    ${ slides.map(slide => html`${ slide }`) }
+    ${ this.slides.map(slide => html`${ slide }`) }
     <button ?disabled=${this.currentSlide === this.slides.length - 1} @click=${ this.next.bind(this) } @keyup=${ this.next.bind(this) } class="carousel__arrow carousel__arrow--right icon">
       <svg tabindex="-1" viewBox="0 0 24 24">
         <use class="carousel__arrow-icon" href="./img/arrow-right.svg#icon"></use>

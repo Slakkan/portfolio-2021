@@ -1,1 +1,2 @@
-import './navigation/navigation.js'
+import './navigation/intersectionObserver.js';
+import './navigation/auto-scroll.js';

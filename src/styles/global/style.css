@@ -5,6 +5,7 @@
   font-size: 14px;
   color: var(--white);
   font-family: Roboto;
+  scroll-behavior: smooth;
 }
 
 a {

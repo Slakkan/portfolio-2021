@@ -2,8 +2,6 @@
 const sections = Array.from(document.querySelectorAll('section'));
 const links = Array.from(document.querySelectorAll('nav > ul > li'));
 
-let currentSection = sections[0];
-
 const mobileOptions = {
   rootMargin: "0px 0px -1px 0px",
   threshold: 0.5
@@ -31,7 +29,6 @@ const observeFunction = (entries) => {
     const index = sections.findIndex(section => section === entry.target);
     if (entry.isIntersecting) {
       links[index].classList.add('link-active');
-      currentSection = entry.target;
     } else {
       links[index].classList.remove('link-active');
     }
