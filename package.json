@@ -4,7 +4,8 @@
   "description": "lightweight portfolio 2021",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "serve": "npm run build && node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/Slakkan/portfolio-2021#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "lit-html": "^1.4.1"
   },
   "devDependencies": {
